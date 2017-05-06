@@ -2,7 +2,7 @@
     ServerName yourserver.tld/path/to/api
 
     WSGIDaemonProcess apitest user=www-data group=www-data threads=5
-    WSGIScriptAlias / /var/www/apitest/apitest.wsgi
+    WSGIScriptAlias /path/to/api /var/www/apitest/apitest.wsgi
 
     <Directory /var/www/apitest>
         WSGIProcessGroup apitest
