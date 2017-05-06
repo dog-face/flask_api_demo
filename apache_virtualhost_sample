@@ -1,0 +1,14 @@
+<VirtualHost *:80>
+    ServerName yourserver.tld/path/to/api
+
+    WSGIDaemonProcess apitest user=www-data group=www-data threads=5
+    WSGIScriptAlias / /var/www/apitest/apitest.wsgi
+
+    <Directory /var/www/apitest>
+        WSGIProcessGroup apitest
+        WSGIApplicationGroup %{GLOBAL}
+        WSGIScriptReloading On
+        Order deny,allow
+        Allow from all
+    </Directory>
+</VirtualHost>

@@ -1,4 +1,4 @@
 import sys
-sys.path.append('/home/www/apitest')
+sys.path.append('/var/www/apitest')
 
 from apitest import app as application
